@@ -1,0 +1,130 @@
+body {
+  font-family: "Open Sans";
+  font-size: 14px;
+  height: 100vh;
+  background: rgb(0,0,0);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(89,89,89,1) 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 0%,rgba(89,89,89,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 0%,rgba(89,89,89,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#595959',GradientType=1 );  margin: 0;
+  padding: 0;
+}
+
+#particles-js {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  
+  .header {
+    position: absolute;
+    top: calc(50% - 200px);
+    margin: auto;
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    font-family: $font-main;
+
+    .title {
+      font-family: $font-main;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      margin-top: 0px;
+      margin-bottom: 50px;
+    }
+
+    .start {
+      padding: 10px;
+      border: 1px solid #fff;
+      text-decoration: none;
+      color: #fff;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+  #playground {
+    display: none;
+    .score {
+      position: absolute;
+      bottom: 0;
+      right: 10px;
+      display: block;
+      color: #fff;
+      font-family: $font-main;
+      font-size: 30px;
+      width: 100px;    
+    }  
+    .timer {
+      position: absolute;
+      width: 100px;
+      bottom: 50px;
+      right: 10px;
+      display: block;
+      color: #fff;
+      font-family: $font-main;
+      font-size: 30px;
+    }  
+    .ball {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      opacity: 0.9;
+      background-color: #fff;
+      top: calc(50% - 25px);
+      left: calc(50% - 25px);
+      border: 2px solid transparent;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        background-color: transparent;
+        border: 2px solid $color-primary;
+      }
+    }
+  }
+  .final-score {
+    position: absolute;
+    display: none;
+    top: calc(50% - 80px);
+    left: calc(50% - 80px);
+    color: #fff;
+    font-family: $font-main;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 50%;
+    width: 160px;
+    padding-top: 60px;
+    height: 160px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+      border-color: $color-primary;
+    }
+  } 
+
+  .new {
+    display: none;
+    font-family: $font-main;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: calc(50% - 50px);
+    font-weight: bold;
+    left: 0;
+    right: 0; 
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
